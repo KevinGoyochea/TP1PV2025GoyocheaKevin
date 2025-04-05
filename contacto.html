@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/assets/css/sylesIndex.css">
+    <link rel="stylesheet" href="/assets/css/stylesContacto.css">
+</head>
+<body>
+
+    
+    
+    <form>
+        <h2>Contacto</h2>
+        <div class="input">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="name" name="name" required placeholder="nombre">
+                
+            <label for="phone">Telefono</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Telefono">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Email">
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Mensaje"></textarea>
+
+            <div class="form-txt">
+                <a>Politica de Privacidad</a>
+                <a>Terminos y condiciones</a>
+            </div>
+
+            <!--<input class="btn" type="submit" value="Enviar">-->
+            <button class="btn" type="submit" onclick="enviarFormulario()">Enviar</button>
+        </div>
+    </form>
+    
+
+    <script>
+        function enviarFormulario(){
+            event.preventDefault(); // Evitar el envío del formulario por defecto
+            var nombre = document.getElementById("name").value;
+            var telefono = document.getElementById("phone").value;
+
+            console.log("Nombre: " + nombre);
+            console.log("Teléfono: " + telefono);
+            alert("nombre: " + nombre + "\nTeléfono: " + telefono);
+        }
+    </script>
+</body>
+</html>
